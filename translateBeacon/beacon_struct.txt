@@ -1,0 +1,125 @@
+BeaconStruct
+int32 satTime
+int32 GPSWeek
+float GPSSec
+double xPosition
+double yPosition
+double zPosition
+double xVelocity
+double yVelocity
+double zVelocity
+uint8 systemMode
+uint8 subpowerStates
+int16 epochNumber
+uint16 radNumber
+uint32 spiSent
+uint32 spiDropped
+uint16 batteryCap
+int8 acsMode
+float memory
+float cpu15
+
+CDHStatus
+int32 time   // log the time the stats were taken
+float cpu1   // 1  minute loads (% of CPU)
+float cpu5   // 5  minute loads (% of CPU)
+float cpu15  // 15 minute loads (% of CPU)
+float memory // % of memory
+
+SWPStatus
+int32 time
+float hotswaps[32]
+
+THMStatus
+int32 time
+float tempSensors[64]
+
+ACSStatus
+float mag_x
+float mag_y
+float mag_z
+float curr_mrp_x
+float curr_mrp_y
+float curr_mrp_z
+float targ_mrp_x
+float targ_mrp_y
+float targ_mrp_z
+float rwspeed_x
+float rwspeed_y
+float rwspeed_z
+float angrate_x
+float angrate_y
+float angrate_z
+float gyro_x
+float gyro_y
+float gyro_z
+float rw_pwm_x
+float rw_pwm_y
+float rw_pwm_z
+float tr_x
+float tr_y
+float tr_z
+int8 mode
+
+PLDStatus
+uint8 powerFault
+uint16 motorSpeed
+uint8 thermistors[10]
+uint8 adcDataWorking
+uint16 control
+
+EPSStatus
+uint16 current3v3
+uint16 voltage3v3
+uint16 currentVbat
+uint16 voltageVbat
+uint16 current12v
+uint16 voltage12v
+uint16 remainingCapacity
+uint16 battCurrent
+uint16 battVoltage
+uint16 battStatus
+uint16 frangCurrent
+uint16 frangVoltage
+uint16 convCurrentX
+uint16 convThreshX
+uint16 convCurrentY
+uint16 convThreshY
+uint16 convCurrentW
+uint16 convThreshW
+
+ACSConfig
+int32 testConfig
+
+CDHConfig
+int32 testConfig
+
+CMDConfig
+int32 resetPeriod // seconds
+int32 fileChunkSize
+int32 maxDownlinkSize
+int32 beaconPeriod
+int32 increasedBeaconPeriod
+
+COMConfig
+int32 testConfig
+
+EPSConfig
+uint16 minCOMCharge
+uint16 minPLDCharge
+uint16 minDSTCharge
+
+FMGConfig
+int32 testConfig
+
+PLDConfig
+int32 chunkSize
+
+SCHItem
+double latitude
+double longitude
+double radius
+uint8 enter_mode
+int32 timeout
+uint8 mode
+int32 duration
